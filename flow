@@ -10,3 +10,5 @@ GET http://embed.player.omroep.nl/sle/ugslplayer.xap
 
 GET http://embed.player.omroep.nl/sle/ug_config.xml
 GET http://player.omroep.nl/info/security
+** magic md5 methods, see magic.md5 **
+
