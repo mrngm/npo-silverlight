@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<streams afleveringid="12411201">
+<stream compressie_formaat="mov" compressie_kwaliteit="std">
+<serviceurl>
+http://download.omroep.nl/secure/
+</serviceurl>
+<streamurl>
+/ceresflash/h264/1/eo/rest/2011/EO_101169690/std.20110421.m4v
+</streamurl>
+</stream>
+<stream compressie_formaat="mov" compressie_kwaliteit="sb">
+<serviceurl>
+http://download.omroep.nl/secure/
+</serviceurl>
+<streamurl>
+/ceresflash/h264/1/eo/rest/2011/EO_101169690/sb.20110421.m4v
+</streamurl>
+</stream>
+<stream compressie_formaat="mov" compressie_kwaliteit="bb">
+<serviceurl>
+http://download.omroep.nl/secure/
+</serviceurl>
+<streamurl>
+/ceresflash/h264/1/eo/rest/2011/EO_101169690/bb.20110421.m4v
+</streamurl>
+</stream>
+<stream compressie_formaat="wmv" compressie_kwaliteit="sb">
+<streamurl>
+http://odi.omroep.nl/video/embedplayer/wmv_sb/c0105029d0490baa71faf4ffcbd6e0bd/4db1d31d/EO_101169690/?type=asx
+</streamurl>
+</stream>
+<stream compressie_formaat="wmv" compressie_kwaliteit="bb">
+<streamurl>
+http://odi.omroep.nl/video/embedplayer/wmv_bb/ebda816bd2686d4ad10231731a056bb6/4db1d31d/EO_101169690/?type=asx
+</streamurl>
+</stream>
+<stream compressie_formaat="wvc1" compressie_kwaliteit="std">
+<streamurl>
+http://odi.omroep.nl/video/embedplayer/wvc1_std/50e9da210f55ec61cdc38bef6f18e8ba/4db1d31d/EO_101169690/?type=asx
+</streamurl>
+</stream>
+</streams>
