@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Configuration file for the UG players.
+Configuration is always loaded from the path where the player object (XAP, SWF) is located.
+Only the filename of the config file to load can be set through the API, never its location.
+-->
+
+<!-- identity can be sl or fl for Silverlight or Flash. -->
+<ugconfig version="1.0" identity="sl">
+<!-- Base configuration -->
+<config>
+<!-- Advertisement information, if it is enabled, the player url, a tile and the advertisement size. -->
+<advertising enabled="true">
+<adplayerurl>mediaplayer.nl</adplayerurl>
+<tile>3</tile>
+<size>336x280</size>
+<!-- The minumum delay between two adverts. -->
+<minimumDelay>600</minimumDelay>
+<!-- The video duration must be bigger than the minimumVideoDurationPreRoll (in seconds) to show a preroll else it is a postroll. -->
+<minimumVideoDurationPreRoll>180</minimumVideoDurationPreRoll>
+<markandminiadtagparamurl>http://mm.markandmini.com/ads/dart/ster/set.cfm?s=488&amp;u=3&amp;timeindicator={TimeIndicator}&amp;contentduration={ContentDuration}</markandminiadtagparamurl>
+</advertising>
+<urls>
+<!-- The urls used in this player. -->
+<episodeMetadataURL>http://player.omroep.nl/info/metadata/aflevering/</episodeMetadataURL>
+<episodeStreamURL>http://player.omroep.nl/info/stream/aflevering/</episodeStreamURL>
+<episodeSubtitleURL>http://ea.omroep.nl/tt888/</episodeSubtitleURL>
+<fragmentMetadataURL>http://player.omroep.nl/info/metadata/fragment/</fragmentMetadataURL>
+<fragmentStreamURL>http://player.omroep.nl/info/stream/fragment/</fragmentStreamURL>
+<playlistEpisodeMetadataURL>http://player.omroep.nl/info/playlist/aflevering/</playlistEpisodeMetadataURL>
+<playlistFragmentMetadataURL>http://player.omroep.nl/info/playlist/fragment/</playlistFragmentMetadataURL>
+<playlistSeriesMetadataURL>http://player.omroep.nl/info/playlist/serie/</playlistSeriesMetadataURL>
+<playlistUitzendinggemistURL>http://www.uitzendinggemist.nl/index.php/rss/</playlistUitzendinggemistURL>
+<seriesMetadataURL>http://player.omroep.nl/info/metadata/serie/</seriesMetadataURL>
+<sessionURL>http://player.omroep.nl/info/security/</sessionURL>
+<stationLogosURL>http://embed.player.omroep.nl/sl/pics/omroepen/</stationLogosURL>
+
+<defaultTiplistImageURL></defaultTiplistImageURL>
+<npoURL>http://www.omroep.nl</npoURL>
+<playerURL>http://www.omroep.nl/subsites/embeddable-player</playerURL>
+<ugURL>http://www.uitzendinggemist.nl</ugURL>
+
+<!-- Url used in the embedcode -->
+<embedURL>http://embed.player.omroep.nl/sle/ugslplayer.xap</embedURL>
+<!-- The url to an image that is visible when the needed plugin isn't installed. -->
+<pluginMissingImageURL>http://embed.player.omroep.nl/sle/downloadsilverlight.jpg</pluginMissingImageURL>
+<!-- The url to an alternative player when playing a episode, this is visible when the plugin isn't installed. -->
+<pluginMissingEpisodeURL>http://player.omroep.nl/?aflID={EpisodeID}</pluginMissingEpisodeURL>
+<!-- The url to an alternative player when playing a serie, this is visible when the plugin isn't installed. -->
+<pluginMissingSeriesURL>http://player.omroep.nl/?serid={SeriesID}</pluginMissingSeriesURL>
+<!-- The url to an alternative player when playing a fragment, this is visible when the plugin isn't installed. -->
+<pluginMissingFragmentURL>http://player.omroep.nl/?aflID={EpisodeID}&amp;start={Start}&amp;end={End}</pluginMissingFragmentURL>
+</urls>
+<sitestat>
+<!-- Used in composition of the correct Sitestat counter, can be extern or intern -->
+<indicator>extern</indicator>
+
+<!-- The sitestat urls for specific actions. -->
+<eventTrackers>
+<!-- Not station/broadcaster specific so should be hardcoded -->
+<fullscreen>http://nl.sitestat.com/klo/po/s?uitzendinggemist.publiekeomroep.ondemand.tv.player.fullscreen.sl.{0}&amp;category=uitzendinggemist&amp;ns_webdir=uitzendinggemist&amp;thema=amusement</fullscreen>
+<pause></pause>
+<tipListOpened></tipListOpened>
+<tipClicked></tipClicked>
+<play></play>
+<scrubberChange></scrubberChange>
+<settingsOpened></settingsOpened>
+<volumeChange></volumeChange>
+</eventTrackers>
+</sitestat>
+<messages>
+<!-- The error messages that can be visible in the player. -->
+<errors>
+<!-- Visible when the player failed so load the video. -->
+<message class="video" code="general">Failed to connect to video server</message>
+<!-- Visible when the player tries to show an item from the playlist that doesn't exist. -->
+<message class="tiplist" code="outOfRange">Warning! Invalid playlist range: {0}</message>
+<!-- Visible when the player failed to load the stream xml. -->
+<message class="stream" code="general">Streamdata could not be retrieved</message>
+<!-- Visible when the player failed to load the stream xml, because of security. -->
+<message class="stream" code="security">Streamdata could not be retrieved (security error)</message>
+<!-- Visible when the player failed to load the metadata xml. -->
+<message class="metadata" code="general">Metadata could not be retrieved</message>
+<!-- Visible when the player failed to load the metadata xml, because of security. -->
+<message class="metadata" code="security">Metadata could not be retrieved (security error)</message>
+
+<!-- Visible when the metadata or stream xml returns a specific error code. -->
+<message class="metadata" code="300">Geen stream(s) gevonden</message>
+<message class="metadata" code="301">Aflevering is op dit moment niet beschikbaar</message>
+<message class="metadata" code="302">Geen correcte Aflevering ID meegegeven</message>
+<message class="metadata" code="310">Fragment niet gevonden</message>
+<message class="metadata" code="311">Geen aflevering gevonden bij fragment</message>
+<message class="metadata" code="312">Geen correct fragment ID meegegeven</message>
+<message class="metadata" code="320">Serie niet gevonden</message>
+<message class="metadata" code="321">Geen aflevering gevonden bij deze serie</message>
+<message class="metadata" code="322">Geen correct serie ID meegegeve</message>
+<message class="metadata" code="330">Geen stream(s) gevonden</message>
+<message class="metadata" code="340">Geen uitzending gevonden</message>
+<message class="metadata" code="350">Geen geldige aflevering, serie of fragment ID</message>
+<message class="metadata" code="351">Geen aflevering of fragment meegegeven</message>
+<message class="metadata" code="400">Geen hash meegegeven</message>
+<message class="metadata" code="401">Geen correcte Hash meegegeven</message>
+<message class="metadata" code="402">Onbekend playlist type</message>
+<message class="metadata" code="500">DB error</message>
+<message class="metadata" code="501">Geen geldig media type</message>
+</errors>
+
+<!-- The information messages that can be visible in the player. -->
+<info>
+<!-- Visible when the video is buffering. -->
+<message class="video" id="buffering">Buffering</message>
+<!-- Visible when the player is trying to show the video. -->
+<message class="stream" id="opening">Connecting to video server</message>
+<!-- Visible when the player is loading the playlist xml. -->
+<message class="tiplist" id="loading">Loading playlist XML</message>
+<!-- Visible when the player is loading the session xml. -->
+<message class="session" id="loading">Loading session XML</message>
+<!-- Visible when the player is loading the stream xml. -->
+<message class="stream" id="loading">Loading streamdata XML</message>
+<!-- Visible when the player is loading the metadata xml. -->
+<message class="metadata" id="loading">Loading metadata XML</message>
+<!-- Visible when the player is loading the subtitle xml. -->
+<message class="subtitles" id="loading">Loading subtitle XML</message>
+</info>
+</messages>
+
+<settings>
+<controls>
+<hidetimeout>6</hidetimeout>
+</controls>
+<buttons>
+<!-- If the user is allowed to enable subtitles (Not implemented yet) -->
+<subtitlesEnabled>false</subtitlesEnabled>
+</buttons>
+<streamLifeTime>60</streamLifeTime>
+<stillBaseUrl>http://frames.uitzendinggemist.nl/episodes/{WhatsOnID}</stillBaseUrl>
+<stillMissingUrl>http://embed.player.omroep.nl/sl/defaultstill.jpg</stillMissingUrl>
+</settings>
+
+<subtitle>
+<!-- The application name that is used for getting the subtitles -->
+<appName>embedplayer</appName>
+</subtitle>
+
+<embed>
+<!--
+The URL's that are used to embed the player on different sites. The following parameters can be used:
+
+{Title} = The title of the episode that is currently playing.
+{Embed} = The embed code for the player with the current episode as video.
+{URL} = The url to the player to watch the current episode.
+-->
+<shares>
+<share id="twitter">
+<url>http://twitter.com/home?status={Title}: {URL}</url>
+</share>
+<share id="facebook">
+<url></url>
+</share>
+<share id="hyves">
+<url>http://www.hyves-share.nl/button/gadget/?title={Title}&amp;html={Embed}</url>
+</share>
+</shares>
+<popup>
+<!--
+Options for the link to the extra embed options page
+{EpisodeID} = The ID of the episode to embed.
+-->
+<enabled>true</enabled>
+<url>http://nieuw.instellingen.omroep.nl/embedopties/sl/aflevering/{EpisodeID}</url>
+</popup>
+<embedcode>
+<!--
+The embed code that will be used when embedding the player.
+
+The values surrounded with { } will be changed to the current values of the player
+when the user wants to embed it. The possibilities are:
+
+{EmbedUrl} = The url to the player, the location is added to the urls list in the config.
+{Width} = The width of the embedded player. Will be the current width of the player.
+{Height} = The height of the embedded player. Will be the current height of the player.
+{Params} = The initParams will contain the information to show the embedded player in the same state as the current player.
+{PluginMissingImageUrl} = The url to an image that is visible when the needed plugin isn't installed.
+{PluginMissingUrl} = The url to an image that is visible when the needed plugin isn't installed.
+-->
+<![CDATA[
+<object data='data:application/x-silverlight-2,' type='application/x-silverlight-2' width='{Width}' height='{Height}'>
+<param name='source' value='{EmbedUrl}'/>
+<param name='enablehtmlaccess' value='true'/>
+<param name='initParams' value='{Params}' />
+<embed source='{EmbedUrl}'
+type='application/x-silverlight-2' enablehtmlaccess='true' width='{Width}'
+height='{Height}' initParams='{Params}'>
+<a href='http://go.microsoft.com/fwlink/?LinkID=124807' style='text-decoration: none;'>
+<img src='{PluginMissingImageUrl}' alt='Get Microsoft Silverlight' style='border-style: none'/>
+</a>
+<br />
+<a href='{PluginMissingUrl}'>Bekijk de video in andere formaten.</a>
+</embed>
+</object>
+]]>
+</embedcode>
+</embed>
+<playmode>play</playmode>
+<stream>
+<!-- sb (low), bb (normal) or std (high) -->
+<compression_quality>std</compression_quality>
+</stream>
+</config>
+
+<!-- Alias specific configuration. Alias specific configuration always inherits from the base configuration. -->
+<config alias="sl">
+<!-- Any nodes from the general config can be overridden here -->
+<advertising enabled="true"></advertising>
+<sitestat>
+<!-- Used in composition of the correct Sitestat counter, can be extern or intern -->
+<indicator>intern</indicator>
+</sitestat>
+</config>
+<config alias="slg">
+<!-- Any nodes from the general config can be overridden here -->
+<advertising enabled="false"></advertising>
+</config>
+<config alias="slx">
+<!-- Any nodes from the general config can be overridden here -->
+<advertising enabled="false"></advertising>
+<sitestat>
+<!-- Used in composition of the correct Sitestat counter, can be extern or intern -->
+<indicator>intern</indicator>
+</sitestat>
+</config>
+<config alias="sle">
+<!-- Any nodes from the general config can be overridden here -->
+<playmode>pause</playmode>
+<sitestat>
+<!-- Used in composition of the correct Sitestat counter, can be extern or intern -->
+<indicator>extern</indicator>
+</sitestat>
+</config>
+
+</ugconfig>

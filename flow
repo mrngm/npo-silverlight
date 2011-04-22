@@ -1,0 +1,12 @@
+GET http://embed.player.omroep.nl/sle/ugslplayer.xap
+	params
+		episodeID=12411201
+		width=800
+		height=445
+		volume=100
+		viewMode=video
+		playMode=play
+		playlistEnabled=yes
+
+GET http://embed.player.omroep.nl/sle/ug_config.xml
+
