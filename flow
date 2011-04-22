@@ -9,4 +9,4 @@ GET http://embed.player.omroep.nl/sle/ugslplayer.xap
 		playlistEnabled=yes
 
 GET http://embed.player.omroep.nl/sle/ug_config.xml
-
+GET http://player.omroep.nl/info/security
