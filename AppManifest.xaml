@@ -1,8 +1,0 @@
-﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" ExternalCallersFromCrossDomain="ScriptableOnly" EntryPointAssembly="NPOEmbedPlayer" EntryPointType="NPOEmbedPlayer.App" RuntimeVersion="2.0.31005.0">
-  <Deployment.Parts>
-    <AssemblyPart x:Name="NPOEmbedPlayer" Source="NPOEmbedPlayer.dll" />
-    <AssemblyPart x:Name="AgDartShell" Source="AgDartShell.dll" />
-    <AssemblyPart x:Name="System.Xml.Linq" Source="System.Xml.Linq.dll" />
-    <AssemblyPart x:Name="System.Xml.Serialization" Source="System.Xml.Serialization.dll" />
-  </Deployment.Parts>
-</Deployment>
