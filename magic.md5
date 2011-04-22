@@ -1,11 +1,15 @@
 * metadataUrlHashMethod
 * streamUrlHashMethod
-** md5(fragmentId + "|" + sessionKey[1]);
+** hash = toUpper(md5(fragmentId + "|" + sessionKey[1]));
 ** fragmentId is usually the same as episodeId, else it's the fragmentId
+** URL form: http://player.omroep.nl/info/{metadata,stream}/aflevering/afleveringId/hash
 
 * streamServiceUrlHashMethod
 ** md5(sessionKey[2] + streamUrl + (sessionKey[0] + timeStampSeconds));
 ** (sessionKey[0] + timeStampSeconds) referred to as 'str'
+** serviceUrl: found in info.stream.aflevering.afleveringId.xml/streams/stream[
+** streamUrl: found in info.stream.aflevering.afleveringId.xml
+** URL form: 
 
 * subtitleUrlHashMethod
 ** even more complicated, see silverlight/reflected/Subtitle.cs
