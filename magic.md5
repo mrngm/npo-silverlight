@@ -5,8 +5,8 @@
 ** URL form: http://player.omroep.nl/info/{metadata,stream}/aflevering/afleveringId/hash
 
 * streamServiceUrlHashMethod
-** hash = toUpper(md5(sessionKey[2] + streamUrl + (sessionKey[0] + timeStampSeconds)));
-** (sessionKey[0] + timeStampSeconds) referred to as 'str'
+** hash = md5(sessionKey[2] + streamUrl + (sessionKey[0] + timeStampSeconds));
+** (sessionKey[0] + timeStampSeconds).toHex referred to as 'str'
 ** serviceUrl: found in info.stream.aflevering.afleveringId.xml/streams/stream[compressie_formaat=mov]
 ** streamUrl: found in info.stream.aflevering.afleveringId.xml/streams/stream[compressie_formaat=mov]
 ** URL form: serviceUrl + hash + "/" + str + streamUrl
